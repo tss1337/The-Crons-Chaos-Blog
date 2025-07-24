@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VitaSunshine - Blog Post</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #87CEEB;
+      background-image: url('pictures/indexwallpaperlogo.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      position: relative;
+      z-index: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: -1;
+    }
+
+    header {
+      background-color: transparent;
+      border-bottom: 2px solid #FFC0CB;
+      padding: 16px;
+    }
+
+    header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #87ceeb;
+      transition: text-shadow 0.3s ease;
+    }
+
+    header h1:hover {
+      text-shadow: 0 0 5px #87ceeb, 0 0 10px #87ceeb, 0 0 20px #ffc0cb, 0 0 30px #ffc0cb;
+    }
+
+    nav {
+      display: flex;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+      margin-right: 12px;
+    }
+
+    .button-89 {
+      --b: 3px;
+      --s: 0.45em;
+      --color: #87ceeb;
+      padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+      color: var(--color);
+      --_p: var(--s);
+      background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+      transition: 0.3s linear, color 0s, background-color 0s, box-shadow 0.3s ease;
+      outline: var(--b) solid #0000;
+      outline-offset: 0.6em;
+      font-size: 16px;
+      border: 0;
+      font-weight: 600;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .button-89:hover,
+    .button-89:focus-visible {
+      --_p: 0px;
+      outline-color: var(--color);
+      outline-offset: 0.05em;
+      box-shadow: 0 0 8px #87ceeb, 0 0 16px #87ceeb, 0 0 24px #ffc0cb, 0 0 32px #ffc0cb;
+      color: #ffc0cb;
+    }
+
+    .button-89:active {
+      background: var(--color);
+      color: #000;
+      box-shadow: none;
+    }
+
+    .post-window {
+      max-width: 800px;
+      margin: 60px auto;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.3);
+      border: 2px solid #ffc0cb;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post-window:hover {
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 30px rgba(255, 192, 203, 0.6);
+    }
+
+    .post-window h2 {
+      color: #ffc0cb;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .post-window p {
+      color: #87ceeb;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .goals-panel {
+      position: fixed;
+      top: 100px;
+      right: -220px;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 2px solid #ffc0cb;
+      padding: 20px;
+      border-radius: 8px 0 0 8px;
+      box-shadow: 0 0 10px rgba(255, 192, 203, 0.3);
+      color: #87ceeb;
+      transition: right 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+      z-index: 10;
+    }
+
+    .goals-panel:hover {
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 30px rgba(255, 192, 203, 0.6);
+    }
+
+    .goals-panel .tab {
+      position: absolute;
+      left: -52px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: left center;
+      background: #ffc0cb;
+      color: #000;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 2px solid #ffc0cb;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 0 6px rgba(255, 192, 203, 0.5);
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .goals-panel .tab:hover {
+      background: #ff95bb;
+      color: #222;
+    }
+
+    .goals-panel h3 {
+      color: #ffc0cb;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .goals-panel ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .goals-panel li {
+      padding: 6px 0;
+      border-bottom: 1px solid #444;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: transparent;
+      border-top: 2px solid #ffc0cb;
+      text-align: center;
+      padding: 16px;
+      color: #ffc0cb;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="container">
+      <img src="pictures/bslogo.png" alt="VitaSunshine Logo" class="logo" />
+      <h1>VitaSunshine BDO Blog</h1>
+      <nav>
+        <a href="index.html" class="button-89">Home</a>
+        <a href="index.html" class="button-89">Blog</a>
+        <a href="#" class="button-89">Vid/Picture</a>
+        <a href="#" class="button-89">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Post Window -->
+  <div class="post-window">
+    <h2>Goals of the Week</h2>
+    <p style="font-size: 0.8rem; color: red; margin: -10px 0 20px 0;">
+      (last update 24-07-2025)
+    </p>
+    <p>
+      This week’s patch is shaping up to be pretty massive. From what I’ve seen, a lot of classes are getting buffs—so things might start looking spicy out there.
+    </p>
+    <p>
+      Last week, I managed to grind enough silver to pick up my second Black Star main weapon, which let me craft the Sovereign main weapon. I pushed it all the way to HEX the same day, burning around 6,000 crons in the process 😅 (worth it!).
+    </p>
+    <p>
+      That said… I'm still stuck figuring out what class to main. A lot of the succession specs are fun but seriously lacking when it comes to solid AoE skills—and that’s kind of a dealbreaker for grind zones.
+    </p>
+    <p>
+      Once the servers are back online, I’m diving straight into testing Woosa Succession. She’s flashy, mobile, and I’ve got high hopes.
+    </p>
+    <p>
+      Next week’s plan is to optimize my accessories and maybe try my luck enhancing. If it fails? Well, I guess it’s another meme for the Discord 😄
+    </p>
+  </div>
+
+  <!-- Slide-Out Goals List -->
+  <div class="goals-panel">
+    <div class="tab">Goals</div>
+    <h3>🎯 My Goals</h3>
+    <p style="font-size: 0.8rem; color: red; margin: -10px 0 10px 0;">
+      (last update 24-07-2025)
+    </p>
+    <ul>
+      <li>Save for Black Star Sub-Weapon</li>
+      <li>Test Woosa Succession</li>
+      <li>Decide on main class</li>
+      <li>Hunting for that perfect grind zone</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 VitaSunshine. All rights reserved.</p>
+    <p>Follow us on <a href="#" style="color: #ffc0cb;">Discord</a> for updates!</p>
+  </footer>
+
+</body>
+</html>
+<!-- End of post1.html -->
