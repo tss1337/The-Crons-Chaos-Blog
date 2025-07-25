@@ -41,8 +41,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
     }
 
     header h1 {
@@ -58,13 +56,13 @@
 
     nav {
       display: flex;
-      flex-wrap: wrap;
       gap: 12px;
     }
 
     .logo {
       width: 60px;
       height: auto;
+      margin-right: 12px;
     }
 
     .button-89 {
@@ -127,7 +125,6 @@
       color: #87ceeb;
       font-size: 1.1rem;
       line-height: 1.8;
-      margin-bottom: 10px;
     }
 
     .goals-panel {
@@ -200,49 +197,6 @@
       color: #ffc0cb;
       margin-top: 40px;
     }
-
-    /* ========== RESPONSIVE MOBILE FIX ========== */
-    @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .post-window {
-        margin: 40px 20px;
-        padding: 24px;
-      }
-
-      .post-window h2 {
-        font-size: 1.5rem;
-      }
-
-      .post-window p {
-        font-size: 1rem;
-      }
-
-      .goals-panel {
-        display: none;
-      }
-
-      .logo {
-        width: 50px;
-      }
-
-      header h1 {
-        font-size: 1.4rem;
-      }
-
-      .button-89 {
-        font-size: 14px;
-        padding: 0.4em 0.8em;
-      }
-    }
   </style>
 </head>
 <body>
@@ -261,39 +215,57 @@
     </div>
   </header>
 
-  <!-- Blog Post 1 -->
+  <!-- Blog Post Window -->
   <div class="post-window">
     <h2>Yo new patch dropped!</h2>
-    <p style="font-size: 0.8rem; color: red; margin-bottom: 20px;">(last update 24-07-2025 time 23:31)</p>
-    <p>So much stuff changed and it’s kinda confusing ngl. My fav grind spot Tunkard Ruins is basically unplayable now... even with all the new monster AP (+100 this patch!!) and other tweaks — I still can’t clear them in one rotation anymore 😩.</p>
-    <p>Maybe I’m doing something wrong? But even my friend with 350+ AP can’t 3-shot them now, lol what? 😂</p>
-    <p>So yeah... I hit up PA and sent a little complaint. Hoping they fix it.</p>
-    <p>On the bright side — I went from 333AP → 339AP!</p>
-    <p>Only 1 AP away from hitting one of my big goals! Let’s gooo! 🚀</p>
-    <ul>
-      <li>– 1x SEP Ring</li>
-      <li>– 1x SEP Belt</li>
-      <li>– 1x SEP Earring</li>
-      <li>– AAAND 1x PEN SEP Sovereign Main Weapon! (4.60% chance, 8 taps, +260 stack)</li>
-    </ul>
-    <p>Dropped 23k Crons on them bad boys 💸 Not bad right? What u think?</p>
-    <p>I know you can’t leave comments yet, but maybe soon — once I figure out how to build a comment system in HTML 😅.</p>
-    <p>Anyway, solid day in BDO — just a bit wild with all these changes.</p>
-    <p>Peace out, and don’t forget: JESUS LOVES U! ✝️💖</p>
+    <p style="font-size: 0.8rem; color: red; margin: -10px 0 20px 0;">
+      (last update 24-07-2025 time 23:31)
+    </p>
+So much stuff changed and it’s kinda confusing ngl. My fav grind spot Tunkard Ruins is basically unplayable now... even with all the new 
+</p>
+monster AP (+100 this patch!!) and other tweaks — I still can’t clear them in one rotation anymore 😩.
+</p>
+Maybe I’m doing something wrong?
+</p>
+But even my friend with 350+ AP can’t 3-shot them now, lol what? 😂
+</p>
+So yeah... I hit up PA and sent a little complaint. Hoping they fix it.
+</p>
+On the bright side — I went from 333AP → 339AP!
+</p>
+Only 1 AP away from hitting one of my big goals! Let’s gooo! 🚀
+– 1x SEP Ring
+</p>
+– 1x SEP Belt
+</p>
+– 1x SEP Earring
+</p>
+– AAAND 1x PEN all the way to SEP Sovereign Main Weapon! (4.60% chance, 8 taps, +260 stack)
+</p>
+Dropped 23k Crons on them bad boys 💸
+Not bad right? What u think?
+</p>
+I know you can’t leave comments yet, but maybe soon — once I figure out how to build a comment system in HTML 😅.
+</p>
+Anyway, solid day in BDO — just a bit wild with all these changes.
+</p>
+Peace out, and don’t forget: JESUS LOVES U! ✝️💖
   </div>
-
-  <!-- Blog Post 2 -->
-  <div class="post-window">
-    <h2>Grinding Reset – A Fresh Start</h2>
-    <p style="font-size: 0.8rem; color: red; margin-bottom: 20px;">(last update 25-07-2025 time 18:11)</p>
-    <p>*Writing*</p>
-  </div>
-
-  <!-- Slide-Out Goals List -->
+  <!-- Blog Post Window (Second Post) -->
+<div class="post-window">
+  <h2>Grinding Reset – A Fresh Start</h2>
+  <p style="font-size: 0.8rem; color: red; margin: -10px 0 20px 0;">
+    (last update 25-07-2025 time 18:11)
+  </p>
+ *Writing*</p>
+</div>
+<!-- Slide-Out Goals List -->
   <div class="goals-panel">
     <div class="tab">Goals</div>
     <h3>🎯 My Goals</h3>
-    <p style="font-size: 0.8rem; color: red; margin-bottom: 10px;">(last update 24-07-2025)</p>
+    <p style="font-size: 0.8rem; color: red; margin: -10px 0 10px 0;">
+      (last update 24-07-2025)
+    </p>
     <ul>
       <li>Save for Black Star Sub-Weapon</li>
       <li>Test Woosa Succession</li>
@@ -310,3 +282,4 @@
 
 </body>
 </html>
+<!-- End of post1.html -->
