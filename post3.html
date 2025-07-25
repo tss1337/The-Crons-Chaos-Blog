@@ -41,6 +41,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     header h1 {
@@ -56,13 +58,13 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
     }
 
     .logo {
       width: 60px;
       height: auto;
-      margin-right: 12px;
     }
 
     .button-89 {
@@ -125,6 +127,7 @@
       color: #87ceeb;
       font-size: 1.1rem;
       line-height: 1.8;
+      margin-bottom: 10px;
     }
 
     .goals-panel {
@@ -197,6 +200,49 @@
       color: #ffc0cb;
       margin-top: 40px;
     }
+
+    /* ========== Responsive ========== */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .post-window {
+        margin: 40px 20px;
+        padding: 24px;
+      }
+
+      .post-window h2 {
+        font-size: 1.5rem;
+      }
+
+      .post-window p {
+        font-size: 1rem;
+      }
+
+      .goals-panel {
+        display: none;
+      }
+
+      .logo {
+        width: 50px;
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .button-89 {
+        font-size: 14px;
+        padding: 0.4em 0.8em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -215,24 +261,46 @@
     </div>
   </header>
 
- <div class="post-window"> <h2>Grind Log – 07/25 🧙‍♀️ Woosa Vibes & Disto Dreams</h2> <p style="font-size: 0.8rem; color: red; margin: -10px 0 20px 0;"> (last update 25-07-2025 time 18:14) </p> <p><strong>🕒 17:10</strong><br> Out here grinding Hexe Elvia on my Woosa (300 AP zone — pure chaos, pure fun). Just discovered a spell combo: <code>S + Q</code>. Asked in the Woosa Succession chat what it even does... turns out it **reflects spells**?! Sounds OP right?</p> <p>Tried using it — but honestly? Can’t tell if it’s doing anything. One dude said “just sell it if you can.” LOL, feels bad but I’m keeping it for now. Might be giga later.</p> <p><strong>🕒 17:35</strong><br> Pulled my **4th Disto Earring** since yesterday! Been grinding around 2 hours total at Hexe Elvia. Since PEN Disto is apparently BIS now (even tho I *hate* that -5 DP, Jay says it doesn’t matter much)... screw it — **New goal unlocked: Stack a truckload of Distos and send them to PEN**. LET'S GO 💪🔥</p> <p><strong>🕒 17:35</strong><br> Still at it... and boom — **5th Disto just dropped** 😱. But... turns out it was from another player’s Orc Event and I did most of the damage. Told him right away and apologized (for real, it was his drop). Props to him tho — chill dude, forgave me on the spot. BDO got some real ones.</p> <p><strong>🕒 18:06</strong><br> 🔋 PSA: **Breaks are OP too.** Even when you’re vibin’ with the grind, step back. Boosts my focus & makes the sessions last longer. Took a quick breather and moved a char to Baby Vell. That name tho — **Baby Vell** 😍. Manifesting Vell’s Heart — I’ve got that good feeling tonight ✨.</p> <p><strong>🕒 18:14</strong><br> Wait... just realized something. I bought 100x Perfume of Courage... but if I'm grinding **AP capped** spots... are they even doing anything? Might’ve wasted silver 🥲. Gonna have to test and dig deeper into this. Stay tuned.</p> </div>
+  <!-- Blog Post Window -->
+  <div class="post-window">
+    <h2>Grind Log – 07/25 🧙‍♀️ Woosa Vibes & Disto Dreams</h2>
+    <p style="font-size: 0.8rem; color: red; margin-bottom: 20px;">(last update 25-07-2025 time 18:14)</p>
 
+    <p><strong>🕒 17:10</strong><br>
+      Out here grinding Hexe Elvia on my Woosa (300 AP zone — pure chaos, pure fun). Just discovered a spell combo: <code>S + Q</code>.
+      Asked in the Woosa Succession chat what it even does... turns out it <strong>reflects spells</strong>?! Sounds OP right?
+    </p>
+    <p>Tried using it — but honestly? Can’t tell if it’s doing anything. One dude said “just sell it if you can.” LOL, feels bad but I’m keeping it for now. Might be giga later.</p>
+
+    <p><strong>🕒 17:35</strong><br>
+      Pulled my <strong>4th Disto Earring</strong> since yesterday! Grinding about 2 hours total. Since PEN Disto is BIS now (even tho I <em>hate</em> that -5 DP), screw it — new goal unlocked: Stack a truckload of Distos and PEN them. LET'S GO 💪🔥
+    </p>
+
+    <p><strong>🕒 17:35</strong><br>
+      Still going... 5th Disto just dropped 😱. It was from someone else's Orc Event — I did most of the damage. Told him immediately and apologized (for real). Chill dude, forgave me 🙏.
+    </p>
+
+    <p><strong>🕒 18:06</strong><br>
+      PSA: <strong>Breaks are OP.</strong> Even mid-flow. Took a breather, swapped a char to Baby Vell. Manifesting Vell’s Heart ✨.
+    </p>
+
+    <p><strong>🕒 18:14</strong><br>
+      Just realized... I bought 100x Perfume of Courage. But if I’m grinding in AP-capped zones, does it even work? 😬 Might’ve wasted silver.
+    </p>
   </div>
-  <!-- Blog Post Window (Second Post) -->
-<div class="post-window">
-  <h2>Grinding Reset – A Fresh Start</h2>
-  <p style="font-size: 0.8rem; color: red; margin: -10px 0 20px 0;">
-    (last update 25-07-2025 time 18:11)
-  </p>
- *Writing*</p>
-</div>
-<!-- Slide-Out Goals List -->
+
+  <!-- Blog Post 2 -->
+  <div class="post-window">
+    <h2>Grinding Reset – A Fresh Start</h2>
+    <p style="font-size: 0.8rem; color: red; margin-bottom: 20px;">(last update 25-07-2025 time 18:11)</p>
+    <p><em>*Writing*</em></p>
+  </div>
+
+  <!-- Slide-Out Goals List -->
   <div class="goals-panel">
     <div class="tab">Goals</div>
     <h3>🎯 My Goals</h3>
-    <p style="font-size: 0.8rem; color: red; margin: -10px 0 10px 0;">
-      (last update 24-07-2025)
-    </p>
+    <p style="font-size: 0.8rem; color: red; margin-bottom: 10px;">(last update 24-07-2025)</p>
     <ul>
       <li>Save for Black Star Sub-Weapon</li>
       <li>Test Woosa Succession</li>
@@ -246,7 +314,5 @@
     <p>&copy; 2025 VitaSunshine. All rights reserved.</p>
     <p>Follow us on <a href="#" style="color: #ffc0cb;">Discord</a> for updates!</p>
   </footer>
-
 </body>
 </html>
-<!-- End of post1.html -->
