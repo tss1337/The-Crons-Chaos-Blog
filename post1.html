@@ -41,6 +41,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     header h1 {
@@ -56,6 +58,7 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
     }
 
@@ -197,6 +200,54 @@
       color: #ffc0cb;
       margin-top: 40px;
     }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        justify-content: flex-start;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .post-window {
+        margin: 40px 20px;
+        padding: 24px;
+      }
+
+      .post-window h2 {
+        font-size: 1.6rem;
+      }
+
+      .post-window p {
+        font-size: 1rem;
+      }
+
+      .goals-panel {
+        display: none; /* Hide goal panel on smaller screens */
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .logo {
+        width: 48px;
+      }
+
+      .button-89 {
+        font-size: 14px;
+        padding: 0.4em 0.8em;
+      }
+
+      footer {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -261,4 +312,3 @@
 
 </body>
 </html>
-<!-- End of post1.html -->
